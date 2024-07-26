@@ -1,40 +1,39 @@
-**README - Projeto de Chamada Remota em Java usando RMI**
+**README - Remote Call Project in Java using RMI**
 
-Este projeto implementa um sistema de chamada remota em Java utilizando RMI (Remote Method Invocation). O sistema visa calcular o valor a ser pago a um trabalhador horista, considerando as normas da CLT (Consolidação das Leis do Trabalho) do Brasil.
+This project implements a remote calling system in Java using RMI (Remote Method Invocation). The system aims to calculate the amount to be paid to an hourly worker, considering the rules of the CLT (Consolidation of Labor Laws) in Brazil.
 
-**Pré-requisitos:**
-- JDK (Java Development Kit) instalado.
-- Ambiente de desenvolvimento Java (como IntelliJ IDEA ou Eclipse).
+**Prerequisites:**
+- JDK (Java Development Kit) installed.
+- Java development environment (such as IntelliJ IDEA or Eclipse).
 
-**Instruções de Compilação:**
-1. Abra um terminal ou prompt de comando.
-2. Navegue até o diretório onde os arquivos Java estão localizados.
-3. Compile os arquivos usando o comando:
+**Compilation Instructions:**
+1. Open a terminal or command prompt.
+2. Navigate to the directory where the Java files are located.
+3. Compile the files using the command:
     ```bash
-    javac CalculadoraServidor.java CalculadoraCliente.java CalculaValorPago.java ResultadoCalculo.java
+    javac CalculadoraServidor.java CalculadoraCliente.java CalculadoraValorPago.java ResultCalculo.java
     ```
 
-**Instruções de Execução:**
-1. Inicie o registro RMI. Execute o comando:
+**Execution Instructions:**
+1. Start RMI registration. Run the command:
     ```bash
     rmiregistry
     ```
-2. Em um terminal separado, inicie o servidor RMI. Execute o comando:
+2. In a separate terminal, start the RMI server. Run the command:
     ```bash
-    java CalculadoraServidor
+    java CalculatorServer
     ```
-3. Em outro terminal ou prompt de comando, inicie o cliente RMI. Execute o comando:
+3. In another terminal or command prompt, start the RMI client. Run the command:
     ```bash
-    java CalculadoraCliente
+    java CalculatorClient
     ```
 
-**Configurações de Rede:**
-Certifique-se de que as configurações de rede permitam a comunicação entre o cliente e o servidor. Verifique se firewalls estão configurados para permitir a comunicação na porta padrão RMI (1099).
+**Network Settings:**
+Make sure the network settings allow communication between the client and the server. Verify that firewalls are configured to allow communication on the standard RMI port (1099).
 
-**Observações:**
-- A classe `CalculaValorPago` contém a lógica de cálculo do valor a ser pago ao trabalhador horista. Personalize conforme as regras da CLT.
-- A interface e implementação do servidor utilizam a API RMI do Java.
+**Comments:**
+- The `CalculaValorPago` class contains the logic for calculating the amount to be paid to the hourly worker. Customize according to CLT rules.
+- The server interface and implementation uses Java's RMI API.
 
-**Referências:**
+**References:**
 - [The Java™ Tutorials - RMI](https://docs.oracle.com/javase/tutorial/rmi/index.html)
-- Livros de referência sobre Java e RMI.
